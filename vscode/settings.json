@@ -1,4 +1,5 @@
 {
+  "remote.SSH.connectTimeout": 120,
   "atomKeymap.promptV3Features": true,
   "auto-close-tag.activationOnLanguage": [
     "html",
@@ -9,15 +10,12 @@
   "bazel.buildifierFixOnFormat": true,
   "breadcrumbs.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
-  "editor.insertSpaces": false,
   "editor.minimap.enabled": false,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.renderWhitespace": "all",
   "editor.snippetSuggestions": "top",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
@@ -42,9 +40,7 @@
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "git.checkoutType": [
-    "local"
-  ],
+  "git.checkoutType": ["local"],
   "go.formatOnSave": true,
   "go.formatTool": "gofmt",
   "go.lintOnSave": "file",
@@ -57,16 +53,11 @@
     "story.tsx": "storybook"
   },
   "search.followSymlinks": false,
-  "todohighlight.keywords": [
-    "TODO",
-    "FIXME"
-  ],
+  "todohighlight.keywords": ["TODO", "FIXME"],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "update.enableWindowsBackgroundUpdates": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 0,
-  "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Atom One Dark",
+  "window.zoomLevel": 2,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.statusBar.visible": true,
   "[ejs]": {
@@ -97,5 +88,129 @@
   },
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
-  "rust-analyzer.inlayHints.chainingHints.enable": false
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "editor.fontFamily": "Monolisa, Menlo, Monaco, 'Courier New', monospace",
+  "editor.inlineSuggest.enabled": true,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "editor.stickyScroll.enabled": true,
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  "redhat.telemetry.enabled": false,
+  "workbench.editor.wrapTabs": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.editor.tabSizing": "shrink",
+  "cSpell.userWords": [
+    "aircover",
+    "airdev",
+    "airmesh",
+    "aleck",
+    "Ccaas",
+    "Ganesh",
+    "Genesys",
+    "Hotfixes",
+    "irbnb",
+    "landgraf",
+    "mgmt",
+    "Micasa",
+    "onetouch",
+    "runbook",
+    "superhost",
+    "TCMR",
+    "trebuchets"
+  ],
+  "editor.guides.bracketPairs": "active",
+  "multiDiffEditor.experimental.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "sourcegraph.url": "https://sourcegraph.d.musta.ch",
+  "eslint.format.enable": true,
+  "scm.workingSets.enabled": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  // https://github.com/Melkeydev/vscode_bindings/blob/main/settings.json
+  "vim.leader": "<Space>",
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    // navigate page up and page down keeping cursor in the middle
+    {
+      "before": ["c-d"],
+      "after": ["M", "c-d"]
+    },
+    {
+      "before": ["c-u"],
+      "after": ["M", "c-u"]
+    },
+    // delete to blackhole register and don't cut https://stackoverflow.com/a/53242853
+    {
+      "before": ["d"],
+      "after": [ "\"", "_", "d" ]
+    },
+    {
+      "before": ["d","d"],
+      "after": ["\"", "_", "d", "d"]
+    },
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j","k"],
+      "after": ["<ESC>"]
+    },
+  ],
+  "vscoconut.graphql.enabled": false,
+  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "sonarlint.pathToNodeExecutable": "/Users/aleck_landgraf/.nvm/versions/node/v18.18.0/bin/node",
+  "sonarlint.focusOnNewCode": false,
+  "vscoconut.dragoman.phraseGroups": [
+    "supagent.nova"
+  ],
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "sonarlint.rules": {
+    "typescript:S1134": {
+      "level": "off"
+    },
+    "typescript:S1135": {
+      "level": "off"
+    }
+  },
+  // "vim.smartRelativeLine": true,
+  // "editor.lineNumbers": "relative"
+
 }
